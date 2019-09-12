@@ -2,6 +2,6 @@
 laboratorios CVDS
 
 ## Integrantes 
-yeisson Gualdron 
-Carlos Miurillo
+yeisson Gualdron  
+Carlos Murillo
 
