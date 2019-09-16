@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(
     urlPatterns = "/helloServlet"
 )
+
+
 public class SampleServlet extends HttpServlet{
     static final long serialVersionUID = 35L;
 

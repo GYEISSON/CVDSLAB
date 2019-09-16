@@ -7,7 +7,7 @@ package edu.eci.cvds.servlet.model;
  * @author Carlos Murillo - Yeisson Gualdron
  *
  */
-public class todo {
+public class Todo {
 	private int userId;
 	private int id;
 	private String title;
@@ -16,7 +16,7 @@ public class todo {
 	/**
 	 * 
 	 */
-	public todo() {
+	public Todo() {
 		// TODO Auto-generated constructor stub
 	}
 	
