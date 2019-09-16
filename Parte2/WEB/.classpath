@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="target/tomcat/work/Tomcat/localhost/_"/>
+	<classpathentry kind="output" path="target/WEB/WEB-INF/classes"/>
+</classpath>
