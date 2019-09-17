@@ -2,7 +2,8 @@ package edu.eci.cvds.servlet;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.*;
+import java.util.*;
 
 @ManagedBean(name="Game")
 @ApplicationScoped
@@ -11,6 +12,7 @@ public class Juego{
 	private int intentos;
 	private int premio;
 	private String estado;
+	private ArrayList<Integer> listIntentos;
 	
 	public Juego(){
 		restart();
@@ -27,6 +29,9 @@ public class Juego{
 	public String getEstado(){
 		return estado;
 	}
+	public ArrayList<Integer> getListIntentos(){
+		return listIntentos;
+	}
 	public void setNumero(int i){
 		numero = i;
 	}
@@ -39,6 +44,9 @@ public class Juego{
 	public void setEstado(String i){
 		estado = i;
 	}
+	public void setListIntentos(ArrayList<Integer> i){
+		listIntentos = i;
+	}
 	
 	public void guess(int i){
 		if(i == numero) {
@@ -49,6 +57,7 @@ public class Juego{
 			premio-=10000;
 			estado = "Fallaste.\n Ingresa otro numero";
 		}
+		listIntentos.add(i);
 	}
 	
 	public void restart(){
@@ -56,5 +65,6 @@ public class Juego{
 		premio = 100000;
 		estado = "Ingrese un numero";
 		numero = (int)(Math.random() * 10000) + 1;
+		listIntentos = new ArrayList<Integer>();
 	}
 }
