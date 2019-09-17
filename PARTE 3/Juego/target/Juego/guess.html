@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<h:head>
+		<title> Juego </title>
+	</h:head>
+	<h:body>
+		<h:form>
+			<p:inputText value="#{Juego.texto}" placehloder="Ingrese un numero" />
+			<p:commandLink value="Mostrar Texto" update="%this" />
+			<p>
+				#(Juego.texto)
+			</p>
+		</h:form>
+	</h:body>
+</html>
