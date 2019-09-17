@@ -64,11 +64,9 @@ public class MiniServlet extends HttpServlet{
 		
 		try{
 			Todo tod = Service.getTodo(Integer.parseInt(id));
-			if( tod != null){
 			ArrayList<Todo> todos=new ArrayList<Todo>();
 			todos.add(tod);
 			responseWriter.write(Service.todosToHTMLTable(todos));
-			}
 		}catch(MalformedURLException e){
 			resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			responseWriter.write("error interno en el servidor \n");
