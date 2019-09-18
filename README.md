@@ -1,7 +1,7 @@
 # CVDSLAB
-laboratorios CVDS
+CVDS LABORATORIO 5
 
 ## Integrantes 
-yeisson Gualdron  
+Yeisson Gualdron  
 Carlos Murillo
 
