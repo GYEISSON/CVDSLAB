@@ -12,11 +12,8 @@ xmlns:p="http://primefaces.org/ui">
 		<br><p:inputText binding="#{input}"/></br>
 		<p:commandButton value="Probar" update="guess_form" actionListener="#{Game.guess(input.value)}"/>
 		<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{Game.restart()}"/>
-		<p:dataTable var="numIntentos" value="#{Game.listIntentos}" style="width:200px;">
-			<p:column headerText="No Intentos">
-				<h:outputText value= "#{Game.listIntentos.indexOf(numIntentos)+1}"/>
-			</p:column>
-			<p:column headerText="Numero ingresado">
+		<p:dataTable var="numIntentos" value="#{Game.listIntentos}" style="width:150px;">
+			<p:column headerText="Numeros ingresados">
 				<h:outputText value= "#{numIntentos}"/>
 			</p:column>
 		</p:dataTable>
