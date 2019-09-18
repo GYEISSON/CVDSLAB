@@ -13,6 +13,15 @@ xmlns:p="http://primefaces.org/ui">
 		<br><p:inputText binding="#{input}" /></br>
 		<p:commandButton value="Probar" update="guess_form" actionListener="#{Game.guess(input.value)}"/>
 		<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{Game.restart()}"/>
+		<br> </br>
+		<p:dataTable var="intento" value="#{Game.listIntentos}" style="width:250px;">
+		<p:column headerText="#Intento" >
+			<h:outputText value= "#{Game.listIntentos.indexOf(intento)+1}" />
+		</p:column>
+		<p:column headerText="Valor Intento"  >
+			<h:outputText value= "#{intento}" />
+		</p:column>
+		</p:dataTable>
 </h:form>
 </h:body>
 </html>
