@@ -26,16 +26,16 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "PARTE3/pom.xml" }}
+            - v1-dependencies-{{ checksum "juego/pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       
-      - run: mvn dependency:go-offline -f PARTE3/pom.xml
+      - run: mvn dependency:go-offline -f juego/pom.xml
 
       - save_cache:
           paths:
-            - ~/PARTE3
-          key: v1-dependencies-{{ checksum "PARTE3/pom.xml" }}
+            - ~/juego
+          key: v1-dependencies-{{ checksum "juego/pom.xml" }}
 
       # run tests!
-      - run: mvn integration-test -f PARTE3/pom.xml
+      - run: mvn integration-test -f juego/pom.xml
