@@ -34,7 +34,7 @@ jobs:
 
       - save_cache:
           paths:
-            - ~/PARTE 3/JUEGO
+            - ~/PARTE3
           key: v1-dependencies-{{ checksum "pom.xml" }}
 
       # run tests!
