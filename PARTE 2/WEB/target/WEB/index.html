@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Buscar ID!</h1>
-            <form method="get" action="laboratorio" onsubmit="validateForm()">
+            <form method="post" action="laboratorio" onsubmit="return validar()">
               <p>Numero: <input  type="text" name="id" size="40" id="valor"></p>
               <p>
                     <input type="submit" value="Enviar" id="botoncito">
@@ -20,13 +20,14 @@
         var botton = document.getElementById("botoncito");
         botton.addEventListener("click",validateForm);
         function validateForm(){ 
-          	if (isNaN(numero.value)) {
+            if (isNaN(numero.value)) {
             	alert("El valor no es un número");
-        		return  false;
-        	}
-        	else return true;
+            }
         }
-  	</script>
+        function validar(){ 
+            return (isNaN(numero.value))?  false:true;
+        }
+    </script>
 </html>
 
 
