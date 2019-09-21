@@ -1,8 +1,7 @@
 package edu.eci.cvds.servlet;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.*;
+import javax.faces.bean.ApplicationScoped;
 import java.util.*;
 
 @ManagedBean(name="Game")
