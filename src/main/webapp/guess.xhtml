@@ -2,22 +2,32 @@
 <html xmlns="http://www.w3c.org/1999/xhtml"
 xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:p="http://primefaces.org/ui">
-<h:head> </h:head>
+<h:head> 
+<style type="text/css">
+	body {
+		background-image:url("Fondo.jpg");
+		background-size: 1370px 700px;
+		background-repeat:no-repeat;
+	}
+	 .titulo { color: orange; font:oblique bold 300% sans-serif;  }
+	 .texto { color: red; font:oblique bold 150% cursive; }
+	 .tabla {color:white; background:green;}
+</style>
+</h:head>
 <h:body>
-	<h2>ADIVINA EL NUMERO</h2>
+	<h2 class="titulo" align="center">ADIVINA EL NUMERO</h2>
 	<h:form id="guess_form">
 		<p:outputLabel value="#{Game.numero}"  style="display:none"/>
-		<br>Premio: <p:outputLabel value="#{Game.premio}"/></br>
-		<br>Numero de intentos: <p:outputLabel value="#{Game.intentos}"/></br>
-		<br><p:outputLabel value="#{Game.estado}"/></br>
-		<br><p:inputText binding="#{input}"/></br>
-		<p:commandButton value="Probar" update="guess_form" actionListener="#{Game.guess(input.value)}"/>
-		<p:commandButton value="Reiniciar" update="guess_form" actionListener="#{Game.restart()}"/>
-		<p:dataTable var="numIntentos" value="#{Game.listIntentos}" style="width:150px;">
-			<p:column headerText="Numeros ingresados">
-				<h:outputText value= "#{numIntentos}"/>
+		<p class="texto" align="center">PREMIO: <p:outputLabel value="#{Game.premio}"/></p>
+		<p class="texto" align="center">NUMERO DE INTENTOS: <p:outputLabel value="#{Game.intentos}"/></p>
+		<p class="texto" align="center"><p:outputLabel value="#{Game.estado}"/></p>
+		<p align="center"><p:inputText style="background:#{'yellow'}"  binding="#{input}"/></p>
+		<p align="center"><p:commandButton class="texto" value="Probar" update="guess_form" actionListener="#{Game.guess(input.value)}" style="background:#{'blue'}"/><p:commandButton class="texto" value="Reiniciar" update="guess_form" actionListener="#{Game.restart()}" style="background:#{'blue'}"/></p>
+		<div align="center"><p:dataTable var="numIntentos" value="#{Game.listIntentos}" style="width:150px;">
+			<p:column headerText="Numeros ingresados" class="tabla">
+				<div align="center"><h:outputText value= "#{numIntentos}"/></div>
 			</p:column>
-		</p:dataTable>
+		</p:dataTable></div>
 	</h:form>
 </h:body>
 </html>
