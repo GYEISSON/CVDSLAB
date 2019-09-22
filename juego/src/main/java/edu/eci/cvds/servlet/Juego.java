@@ -49,12 +49,12 @@ public class Juego{
 	
 	public void guess(int i){
 		if(i == numero) {
-			estado = "Ganaste";
+			estado = "GANASTE";
 		}
 		else{
 			intentos++;
 			premio-=10000;
-			estado = "Fallaste.\n Ingresa otro numero";
+			estado = "FALLASTE. INGRESE OTRO NUMERO";
 		}
 		listIntentos.add(i);
 	}
@@ -62,8 +62,8 @@ public class Juego{
 	public void restart(){
 		intentos = 0;
 		premio = 100000;
-		estado = "Ingrese un numero";
-		numero = (int)(Math.random() * 10000) + 1;
+		estado = "INGRESE UN NUMERO";
+		numero = (int)(Math.random() * 100) + 1;
 		listIntentos = new ArrayList<Integer>();
 	}
 }
